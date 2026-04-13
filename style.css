@@ -1,0 +1,26 @@
+:root {
+  --navy:   #1a2744;
+  --teal:   #0d9488;
+  --gold:   #d97706;
+  --text:   #1e293b;
+  --muted:  #64748b;
+  --border: #e2e8f0;
+  --bg:     #f8fafc;
+  --page:   #ffffff;
+  /* ... rest of your tokens ... */
+}
+
+/* Reset & Base */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body {
+  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+a { color: var(--teal); text-decoration: none; transition: color .2s ease; }
+a:hover { color: var(--navy); }
+
+/* Sticky Nav, Hero, Summary, Timeline, Skills, Projects, Certifications, Awards, Education, Footer, Responsive rules... */
