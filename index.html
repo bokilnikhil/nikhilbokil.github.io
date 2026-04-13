@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<!-- DIGITAL PROFILE: Screen-optimised · Sticky nav · Responsive · No print styles · No JS -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikhil Bokil — Associate Manager, Security Managed Services</title>
+  <style>
+    /* ══════════════════════════════════════════════
+       DESIGN TOKENS
+       ══════════════════════════════════════════════ */
+    :root {
+      --navy:   #1a2744;
+      --teal:   #0d9488;
+      --gold:   #d97706;
+      --text:   #1e293b;
+      --muted:  #64748b;
+      --border: #e2e8f0;
+      --bg:     #f8fafc;
+      --page:   #ffffff;
+      --gold-light: #fef3c7;
+      --gold-border: #fde68a;
+      --teal-light: #ccfbf1;
+      --teal-border: #99f6e4;
+      --shadow-sm:  0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md:  0 4px 12px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.04);
+      --shadow-lg:  0 10px 24px rgba(0,0,0,.10), 0 4px 8px rgba(0,0,0,.04);
+      --radius:  10px;
+      --radius-sm: 6px;
+    }
+
+    /* ══════════════════════════════════════════════
+       RESET & BASE
+       ══════════════════════════════════════════════ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: var(--teal); text-decoration: none; transition: color .2s ease; }
+    a:hover { color: var(--navy); }
+
+    /* ══════════════════════════════════════════════
+       STICKY TOP NAV
+       ══════════════════════════════════════════════ */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .top-nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 0 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .top-nav-inner::-webkit-scrollbar { display: none; }
+
+    .top-nav a {
+      color: rgba(255,255,255,.72);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .3px;
+      padding: 14px 16px;
+      white-space: nowrap;
+      transition: color .2s ease, background .2s ease;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -3px;
+    }
+    .top-nav a:hover {
+      color: #fff;
+      background: rgba(255,255,255,.06);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ══════════════════════════════════════════════
+       LAYOUT CONTAINER
+       ══════════════════════════════════════════════ */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ══════════════════════════════════════════════
+       HERO / HEADER
+       ══════════════════════════════════════════════ */
+    .hero {
+      padding: 56px 0 40px;
+      border-bottom: 3px solid var(--gold);
+      margin-bottom: 48px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -.5px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .hero .role {
+      font-size: 1.2rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .hero .org {
+      font-size: .95rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 0;
+      font-size: .92rem;
+    }
+
+    .contact-row a {
+      color: var(--text);
+      font-weight: 500;
+      transition: color .2s ease;
+    }
+    .contact-row a:hover { color: var(--teal); }
+
+    .contact-sep {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--muted);
+      margin: 0 14px;
+      vertical-align: middle;
+      opacity: .5;
+    }
+
+    /* ══════════════════════════════════════════════
+       SECTION HEADINGS
+       ══════════════════════════════════════════════ */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-title {
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+      color: var(--muted);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+      margin-bottom: 24px;
+    }
+
+    /* ══════════════════════════════════════════════
+       PROFESSIONAL SUMMARY
+       ══════════════════════════════════════════════ */
+    .summary-text {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text);
+      max-width: 780px;
+    }
+
+    .summary-text strong { color: var(--navy); font-weight: 700; }
+
+    /* ══════════════════════════════════════════════
+       WORK EXPERIENCE — TIMELINE
+       ══════════════════════════════════════════════ */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    /* Gold accent bar */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--gold-border) 100%);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    /* Timeline dot */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--page);
+      box-shadow: 0 0 0 3px var(--gold-border);
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .job-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .job-company {
+      font-size: .95rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .job-meta {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .job-dates {
+      font-size: .88rem;
+      color: var(--text);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .job-duration {
+      font-size: .8rem;
+      color: var(--muted);
+    }
+
+    .job-bullets {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+
+    .job-bullets li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      font-size: .95rem;
+      line-height: 1.6;
+    }
+
+    .job-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      opacity: .6;
+    }
+
+    /* Previous experience divider */
+    .prev-divider {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin: 8px 0 20px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .compact-role {
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px dotted var(--border);
+    }
+    .compact-role:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    /* Compact dot */
+    .compact-role::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--border);
+      border: 2px solid var(--page);
+      box-shadow: 0 0 0 2px var(--border);
+    }
+
+    .compact-role .job-header { margin-bottom: 4px; }
+
+    .compact-desc {
+      font-size: .9rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .compact-stack {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 4px;
+    }
+
+    /* ══════════════════════════════════════════════
+       TECHNICAL SKILLS — 2 COLUMN GRID
+       ══════════════════════════════════════════════ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 32px;
+    }
+
+    .skill-row {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skill-label {
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      min-width: 110px;
+      flex-shrink: 0;
+    }
+
+    .skill-values {
+      font-size: .92rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* ══════════════════════════════════════════════
+       KEY PROJECTS — CARD GRID
+       ══════════════════════════════════════════════ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--page);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    .project-card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-live {
+      font-size: .65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--teal);
+      background: var(--teal-light);
+      border: 1px solid var(--teal-border);
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    .project-card-desc {
+      font-size: .9rem;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-pill {
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--teal);
+      background: var(--teal-light);
+      border: 1px solid var(--teal-border);
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    /* ══════════════════════════════════════════════
+       CERTIFICATIONS — 2 COLUMN
+       ══════════════════════════════════════════════ */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 32px;
+    }
+
+    .cert-group-label {
+      grid-column: 1 / -1;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--muted);
+      padding: 14px 0 6px;
+      border-bottom: 1px dashed var(--border);
+      margin-bottom: 0;
+    }
+    .cert-group-label:first-child { padding-top: 0; }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px dotted var(--border);
+      font-size: .9rem;
+      color: var(--text);
+    }
+
+    .cert-check {
+      color: var(--teal);
+      font-weight: 700;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════════════
+       AWARDS — PILL/BADGE STYLE
+       ══════════════════════════════════════════════ */
+    .awards-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .award-badge {
+      font-size: .88rem;
+      font-weight: 600;
+      color: #92400e;
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      padding: 8px 18px;
+      border-radius: 24px;
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+
+    .award-badge:hover {
+      box-shadow: 0 2px 8px rgba(217,119,6,.18);
+      transform: translateY(-1px);
+    }
+
+    /* ══════════════════════════════════════════════
+       EDUCATION
+       ══════════════════════════════════════════════ */
+    .edu-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .edu-list li {
+      padding: 12px 0;
+      border-bottom: 1px dotted var(--border);
+    }
+    .edu-list li:last-child { border-bottom: none; }
+
+    .edu-degree {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+
+    .edu-meta {
+      font-size: .88rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ══════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════ */
+    .site-footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      margin-top: 16px;
+    }
+
+    .footer-name {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .footer-keywords {
+      font-size: .78rem;
+      color: var(--muted);
+      letter-spacing: .3px;
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════════════════
+       RESPONSIVE
+       ══════════════════════════════════════════════ */
+    @media (max-width: 720px) {
+      .container { padding: 0 16px 60px; }
+
+      .hero { padding: 40px 0 28px; margin-bottom: 36px; }
+      .hero h1 { font-size: 2rem; }
+      .hero .role { font-size: 1.05rem; }
+
+      .contact-sep { margin: 0 10px; }
+
+      .top-nav a { padding: 12px 12px; font-size: .78rem; }
+
+      .section { margin-bottom: 36px; }
+
+      .job-header { flex-direction: column; gap: 4px; }
+      .job-meta { text-align: left; }
+
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-row { flex-direction: column; gap: 2px; }
+      .skill-label { min-width: unset; }
+
+      .projects-grid { grid-template-columns: 1fr; }
+
+      .cert-grid { grid-template-columns: 1fr; }
+
+      .awards-row { gap: 8px; }
+      .award-badge { font-size: .82rem; padding: 6px 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.7rem; }
+      .contact-row { flex-direction: column; gap: 4px; }
+      .contact-sep { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════ STICKY TOP NAV ═══════ -->
+  <nav class="top-nav" aria-label="Section navigation">
+    <div class="top-nav-inner">
+      <a href="#home">Home</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#education">Education</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- ═══════ HERO / HEADER ═══════ -->
+    <header class="hero" id="home">
+      <h1>Nikhil Bokil</h1>
+      <p class="role">Associate Manager &ndash; Security Managed Services</p>
+      <p class="org">Accenture &middot; Security Managed Services &middot; Hyderabad, India &middot; 12 Years Experience</p>
+      <div class="contact-row">
+        <a href="mailto:nikhil.bokil@gmail.com">nikhil.bokil@gmail.com</a>
+        <span class="contact-sep"></span>
+        <a href="tel:+919962408493">+91-9962408493</a>
+        <span class="contact-sep"></span>
+        <a href="https://linkedin.com/in/nikhil-bokil-1bb23536" target="_blank" rel="noopener">linkedin.com/in/nikhil-bokil-1bb23536</a>
+      </div>
+    </header>
+
+    <!-- ═══════ PROFESSIONAL SUMMARY ═══════ -->
+    <section class="section" id="summary">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">Associate Manager at Accenture (Security Managed Services) with <strong>12 years</strong> across cybersecurity engineering, data engineering, and enterprise AI. Currently leading <strong>SecureAI</strong> &mdash; architecting SailPoint IdentityNow automation, AI-powered threat intelligence platforms with multi-LLM orchestration (Claude API, GPT-4, Ollama), and ML-based SIEM anomaly detection at enterprise scale. Expertise spans IAM/IGA (SailPoint, CyberArk), LLM engineering, OT/ICS security, and cloud platforms (GCP, Azure, AWS). Holder of <strong>13 cloud &amp; AI credentials</strong> including GCP Professional Cloud Architect, Azure AI Engineer Associate, and Accenture Agentic AI Badge.</p>
+    </section>
+
+    <!-- ═══════ WORK EXPERIENCE ═══════ -->
+    <section class="section" id="experience">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline">
+
+        <!-- Role 1: Accenture -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Associate Manager &ndash; Security Managed Services</div>
+              <div class="job-company">Accenture &middot; Hyderabad, India</div>
+            </div>
+            <div class="job-meta">
+              <div class="job-dates">Jul 2024 &ndash; Present</div>
+              <div class="job-duration">1 yr 9 mos</div>
+            </div>
+          </div>
+          <ul class="job-bullets">
+            <li><strong>SecureAI (Dec 2025&ndash;):</strong> Architecting SailPoint IdentityNow automation (REST API, OAuth2) and multi-LLM threat intelligence platforms (Claude API &rarr; GPT-4 &rarr; Ollama) with governance and auditability embedded from inception.</li>
+            <li><strong>GE Account (Jul 2024&ndash;Nov 2025):</strong> Served as Delivery Lead and Technical SME; led security web application development, ServiceNow dashboards, vulnerability management reporting, and SharePoint provisioning automation using Python and Power Automate.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2: GE Architect -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Senior Software Architect &ndash; Cyber Engineering</div>
+              <div class="job-company">General Electric (GE) &middot; Bengaluru, India (Remote)</div>
+            </div>
+            <div class="job-meta">
+              <div class="job-dates">Jul 2021 &ndash; Jun 2024</div>
+              <div class="job-duration">3 yrs</div>
+            </div>
+          </div>
+          <ul class="job-bullets">
+            <li>Designed and maintained security web applications for GE's global cybersecurity operations; primary SME for architecture decisions, technology selection, and best practices across the team.</li>
+            <li>Architected a scalable telemetry aggregation platform for security operations (Python, FastAPI, PostgreSQL, AWS) and RBAC administration tools with full audit logging for compliance and governance.</li>
+          </ul>
+        </div>
+
+        <!-- Previous Experience -->
+        <div class="prev-divider">Previous Experience</div>
+
+        <!-- Compact: GE Data Engineer -->
+        <div class="compact-role">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Data Engineer</div>
+              <div class="job-company">General Electric &middot; PlatformOps</div>
+            </div>
+            <div class="job-meta">
+              <div class="job-dates">Sep 2019 &ndash; Jun 2021</div>
+            </div>
+          </div>
+          <p class="compact-desc">ETL pipelines (REST APIs, databases, streaming); data quality monitoring and orchestration tooling.</p>
+          <p class="compact-stack">Stack: Python, Flask, AWS EC2, PostgreSQL</p>
+        </div>
+
+        <!-- Compact: Mirabel -->
+        <div class="compact-role">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Data Engineer</div>
+              <div class="job-company">Mirabel Technologies</div>
+            </div>
+            <div class="job-meta">
+              <div class="job-dates">Aug 2016 &ndash; Aug 2019</div>
+            </div>
+          </div>
+          <p class="compact-desc">Built email verification platform from scratch &mdash; core product in marketing suite; full-stack ownership across ingestion, API, caching, and production.</p>
+          <p class="compact-stack">Stack: Python, AWS, MongoDB, Redis</p>
+        </div>
+
+        <!-- Compact: Tata -->
+        <div class="compact-role">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Android Developer (HMI)</div>
+              <div class="job-company">Tata Technologies</div>
+            </div>
+            <div class="job-meta">
+              <div class="job-dates">Apr 2012 &ndash; Jun 2014</div>
+            </div>
+          </div>
+          <p class="compact-desc">Developed Android HMI applications for in-vehicle infotainment systems across Tata vehicle platforms within embedded hardware constraints.</p>
+          <p class="compact-stack">Stack: Android SDK</p>
+        </div>
+
+      </div><!-- /.timeline -->
+    </section>
+
+    <!-- ═══════ TECHNICAL SKILLS ═══════ -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="skill-label">Languages</span><span class="skill-values">Python (Primary), Java (Familiar)</span></div>
+        <div class="skill-row"><span class="skill-label">AI &amp; LLM</span><span class="skill-values">Claude API, OpenAI API (GPT-4), Ollama, RAG Pipelines, Agentic AI, LLM Streaming</span></div>
+        <div class="skill-row"><span class="skill-label">Frameworks</span><span class="skill-values">FastAPI, Flask, React, Node.js, Streamlit, TensorFlow, PyTorch, scikit-learn</span></div>
+        <div class="skill-row"><span class="skill-label">Security Tools</span><span class="skill-values">SailPoint IdentityNow, CyberArk, YARA, VirusTotal, NVD/CISA APIs, ZDI</span></div>
+        <div class="skill-row"><span class="skill-label">Cloud &amp; Data</span><span class="skill-values">GCP, Azure, AWS, MongoDB, PostgreSQL, Apache Kafka, Redis, Apache Flink</span></div>
+        <div class="skill-row"><span class="skill-label">IAM &amp; Identity</span><span class="skill-values">Active Directory, SSO, PKI, OAuth2, MSAL, Microsoft Graph API</span></div>
+        <div class="skill-row"><span class="skill-label">Dev Tools</span><span class="skill-values">Windsurf, Claude Code, Git, VS Code, Postman, Docker</span></div>
+        <div class="skill-row"><span class="skill-label">ML Techniques</span><span class="skill-values">Isolation Forest, Autoencoders, LSTM, XGBoost, Anomaly Detection</span></div>
+        <div class="skill-row"><span class="skill-label">Security Domains</span><span class="skill-values">IAM/IGA, OT/ICS Security, Threat Intelligence, Vulnerability Management, SIEM, Automation</span></div>
+      </div>
+    </section>
+
+    <!-- ═══════ KEY PROJECTS ═══════ -->
+    <section class="section" id="projects">
+      <h2 class="section-title">Key Projects &amp; Platforms Built</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-card-title">AI Email Phishing Analyzer</div>
+          <p class="project-card-desc">.eml/.msg parsing across 7 threat intel APIs; Claude API streaming + adaptive thinking for 0&ndash;100 risk scoring; YARA scanning; 80% cost reduction via MongoDB caching.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Claude API</span>
+            <span class="tech-pill">VirusTotal</span>
+            <span class="tech-pill">YARA</span>
+            <span class="tech-pill">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-title">Vulnerability Intelligence Agent</div>
+          <p class="project-card-desc">Real-time WebSocket CVE interface from NVD, CISA KEV, and ZDI with CVSS-ranked severity badges and natural-language query support.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">WebSocket</span>
+            <span class="tech-pill">NVD/CISA APIs</span>
+            <span class="tech-pill">ZDI</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-title">Azure Entra ID Secret Rotation Tool</div>
+          <p class="project-card-desc">Serverless self-service secret rotation with owner validation, audit logging, and configurable expiry; secured with OAuth2 and MSAL.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Azure Functions</span>
+            <span class="tech-pill">Microsoft Graph API</span>
+            <span class="tech-pill">MSAL</span>
+            <span class="tech-pill">Python</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-title">OT/ICS CISA Advisory Dashboard</div>
+          <p class="project-card-desc">Real-time monitoring of 160+ CISA ICS advisories with severity breakdown, vendor analysis, and trend visualization.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">BeautifulSoup</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-title">
+            Society Gas Meter Reader
+            <span class="badge-live">Live</span>
+          </div>
+          <p class="project-card-desc">Deployed for residential society &mdash; YOLO ML digit recognition from meter photos, billing cycle management, Google OAuth, and RBAC.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">YOLO</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">GCP</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════ CERTIFICATIONS ═══════ -->
+    <section class="section" id="certifications">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+
+        <!-- GCP Group -->
+        <div class="cert-group-label">Google Cloud Platform</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Professional Cloud Architect</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Professional Data Engineer</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Professional Cloud Developer</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Professional Cloud Database Engineer</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Associate Cloud Engineer</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Associate Data Practitioner</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Digital Leader</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Generative AI Leader</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Intelligent Search Technology Expert</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Google Cloud Vertex AI Technology Expert</div>
+
+        <!-- Azure -->
+        <div class="cert-group-label">Microsoft Azure</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Microsoft Azure AI Engineer Associate</div>
+
+        <!-- Accenture Internal -->
+        <div class="cert-group-label">Accenture Internal</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> Accenture Agentic AI Badge</div>
+        <div class="cert-item"><span class="cert-check">&#10003;</span> GPS Agentic AI Project Ready</div>
+
+      </div>
+    </section>
+
+    <!-- ═══════ AWARDS & RECOGNITION ═══════ -->
+    <section class="section" id="awards">
+      <h2 class="section-title">Awards &amp; Recognition</h2>
+      <div class="awards-row">
+        <span class="award-badge">&#9733; Client Value Creation Award</span>
+        <span class="award-badge">&#9733; Deliver with Focus &mdash; #Applause</span>
+        <span class="award-badge">&#9733; Act with Humility &mdash; #Bravo</span>
+        <span class="award-badge">&#9733; Deliver with Focus &mdash; #Spotlight</span>
+      </div>
+    </section>
+
+    <!-- ═══════ EDUCATION ═══════ -->
+    <section class="section" id="education">
+      <h2 class="section-title">Education</h2>
+      <ul class="edu-list">
+        <li>
+          <div class="edu-degree">M.Tech. in Computer Science with Specialization in Big Data Analytics</div>
+          <div class="edu-meta">Vellore Institute of Technology (VIT) &middot; 2014&ndash;2016</div>
+        </li>
+        <li>
+          <div class="edu-degree">MCA &ndash; Master of Computer Applications</div>
+          <div class="edu-meta">Sinhagad Institute of Management, Pune &middot; 2008&ndash;2011</div>
+        </li>
+        <li>
+          <div class="edu-degree">B.Sc &ndash; Computer Science</div>
+          <div class="edu-meta">College of Computer Science, Latur &middot; 2005&ndash;2008</div>
+        </li>
+      </ul>
+    </section>
+
+  </div><!-- /.container -->
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="site-footer">
+    <p class="footer-name">Nikhil Bokil</p>
+    <p class="footer-keywords">IAM &middot; Cybersecurity &middot; AI/ML Engineering &middot; Cloud Architecture &middot; Data Engineering &middot; OT/ICS Security &middot; Enterprise Automation &middot; Machine Learning &middot; SailPoint &middot; CyberArk &middot; Python &middot; FastAPI &middot; React &middot; GCP &middot; Azure &middot; AWS</p>
+  </footer>
+
+</body>
+</html>
